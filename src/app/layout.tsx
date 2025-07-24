@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
+import { Providers } from "./providers";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import "./globals.css";
 
 const bai_jamjuree = Bai_Jamjuree({
-  weight: ["300", "400", "600"],
+  weight: ["400", "500", "700"],
   subsets: ["latin", "thai"],
 });
 
@@ -45,10 +48,6 @@ export const metadata: Metadata = {
     },
   },
 };
-
-import { Providers } from "./providers";
-
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,

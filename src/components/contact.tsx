@@ -38,7 +38,10 @@ const contactItems = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-4 sm:px-8 bg-gray-50">
+    <section
+      id="contact"
+      className="py-24 px-4 sm:px-8 bg-gray-50 min-h-screen"
+    >
       <motion.div
         className="max-w-4xl mx-auto text-center"
         initial={{ opacity: 0, y: 50 }}

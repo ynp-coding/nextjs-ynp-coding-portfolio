@@ -82,7 +82,7 @@ export default function Navbar() {
   return (
     <NavbarUI isBordered position="sticky" onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
-        <p className="font-bold text-inherit">YP Engineering</p>
+        <p className="font-bold text-inherit">YNP Coding</p>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">

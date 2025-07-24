@@ -38,31 +38,12 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">
-          Welcome to <span className="text-yellow-300">YP Engineering</span>
+          Welcome to <br />
+          <span className="text-yellow-300">YNP Coding</span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-md">
           Innovating the future, one project at a time.
         </p>
-
-        {/* Call to Action Buttons */}
-        <div className="flex justify-center gap-6">
-          <Button
-            as={Link}
-            href="/projects"
-            variant="solid"
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-8 py-3 shadow-lg shadow-yellow-400/40 transition-transform hover:scale-105"
-          >
-            Explore Projects
-          </Button>
-
-          <Button
-            as={Link}
-            href="/contact"
-            className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 font-semibold transition-transform hover:scale-105"
-          >
-            Contact Us
-          </Button>
-        </div>
 
         {/* Social Buttons */}
         <div className="flex justify-center gap-6 mt-12">
