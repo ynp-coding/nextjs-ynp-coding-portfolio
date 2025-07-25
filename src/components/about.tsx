@@ -35,23 +35,22 @@ export default function About() {
       ref={ref}
     >
       <motion.div
-        className="max-w-2xl text-center"
+        className="max-w-3xl text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h1 className="text-4xl font-bold mb-4 text-gray-900">About Us</h1>
-        <p className="text-lg text-gray-700 mb-6">
-          At <span className="font-semibold text-primary">YP Engineering</span>,
-          we are passionate about building innovative digital solutions. Our
-          mission is to empower businesses through technology—bridging ideas and
-          execution with modern tools, clean code, and intuitive design.
-        </p>
-        <p className="text-lg text-gray-700 mb-8">
-          With experience in <strong>web development</strong>,{" "}
-          <strong>cloud infrastructure</strong>, and{" "}
-          <strong>data engineering</strong>, our team is committed to delivering
-          scalable and maintainable solutions that create real-world impact.
+        <h1 className="text-4xl font-bold mb-4 text-gray-900">เกี่ยวกับเรา</h1>
+
+        <p className="text-lg text-gray-700 leading-8">
+          <span className="font-semibold">YNP Coding</span> รับพัฒนาระบบ
+          <span className="font-semibold text-primary">
+            {" "}
+            Web Application แบบครบวงจร{" "}
+          </span>
+          เราเชื่อว่าระบบที่ดีไม่เพียงแต่ต้องสวยงามและใช้งานง่าย
+          แต่ยังต้องตอบโจทย์การดำเนินธุรกิจของคุณได้จริง เราจึงใส่ใจในทุกขั้นตอน
+          ตั้งแต่การวิเคราะห์ความต้องการ ออกแบบระบบ พัฒนา ไปจนถึงดูแลหลังส่งมอบ
         </p>
       </motion.div>
     </section>

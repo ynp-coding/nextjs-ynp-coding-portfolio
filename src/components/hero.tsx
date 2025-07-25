@@ -34,14 +34,20 @@ export default function Hero() {
           ที่ออกแบบมาเพื่อให้ตอบโจทย์ธุรกิจของคุณอย่างแท้จริง
         </p>
       </motion.div>
-
-      <Image
-        className="h-[650] w-[650] rounded-full"
-        src={"/banner-logo.jpg"}
-        alt="imamge logo"
-        width={"1000"}
-        height={"1000"}
-      />
+      <motion.div
+        className="relative text-center px-6"
+        initial={{ opacity: 0, x: 100 }} // เริ่มต้นอยู่นอกจอด้านขวา
+        animate={{ opacity: 1, x: 0 }} // เคลื่อนเข้ามา
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Image
+          className="h-[650px] w-[650px] rounded-full" // เพิ่ม px ด้วย
+          src="/banner-logo.jpg"
+          alt="image logo"
+          width={1000}
+          height={1000}
+        />
+      </motion.div>
     </section>
   );
 }
