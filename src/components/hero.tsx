@@ -1,18 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "@heroui/react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Github } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-400 via-purple-500 to-pink-400 overflow-hidden"
+      className="relative flex items-center justify-center min-h-screen overflow-hidden"
     >
-      {/* Background subtle animated circles */}
       <motion.div
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-white/10 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"
@@ -21,66 +18,30 @@ export default function Hero() {
       />
 
       <motion.div
-        className="relative text-center max-w-xl px-6"
+        className="relative text-center px-6"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Logo */}
-        <div className="mx-auto mb-6 w-24 h-24 relative">
-          <Image
-            src="/globe.svg"
-            alt="YP Engineering Logo"
-            fill
-            sizes="96px"
-            style={{ objectFit: "contain" }}
-          />
-        </div>
-
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">
-          Welcome to <br />
-          <span className="text-yellow-300">YNP Coding</span>
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+          <span className="text-yellow-500">YNP Coding</span>
+          <br />
+          <span>Web Application</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-md">
-          Innovating the future, one project at a time.
+
+        <p className="text-xl md:text-2xl mb-8 text-gray-600/90 drop-shadow-md">
+          รับพัฒนาระบบ Web Application แบบครบวงจร <br />
+          ที่ออกแบบมาเพื่อให้ตอบโจทย์ธุรกิจของคุณอย่างแท้จริง
         </p>
-
-        {/* Social Buttons */}
-        <div className="flex justify-center gap-6 mt-12">
-          <motion.a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="text-blue-600 hover:text-blue-800 transition-colors bg-white p-3 rounded-full shadow-lg"
-          >
-            <Facebook size={32} />
-          </motion.a>
-
-          <motion.a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="text-blue-400 hover:text-blue-600 transition-colors bg-white p-3 rounded-full shadow-lg"
-          >
-            <Twitter size={32} />
-          </motion.a>
-
-          <motion.a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="text-gray-900 hover:text-black transition-colors bg-white p-3 rounded-full shadow-lg"
-          >
-            <Github size={32} />
-          </motion.a>
-        </div>
       </motion.div>
+
+      <Image
+        className="h-[650] w-[650] rounded-full"
+        src={"/banner-logo.jpg"}
+        alt="imamge logo"
+        width={"1000"}
+        height={"1000"}
+      />
     </section>
   );
 }
