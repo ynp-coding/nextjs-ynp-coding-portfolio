@@ -14,32 +14,14 @@ interface Skill {
 const skills: Skill[] = [
   {
     id: 1,
-    name: "React",
-    level: "Advanced",
-    description: "Expertise in building SPA and component-based UI.",
+    name: "Python",
+    level: "intermidae",
+    description: "",
   },
   {
     id: 2,
-    name: "TypeScript",
-    level: "Intermediate",
-    description: "Strong typing to improve code maintainability and safety.",
-  },
-  {
-    id: 3,
-    name: "Node.js",
-    level: "Intermediate",
-    description: "Building scalable backend services and APIs.",
-  },
-  {
-    id: 4,
-    name: "Tailwind CSS",
-    level: "Advanced",
-    description: "Utility-first CSS framework for fast UI development.",
-  },
-  {
-    id: 5,
     name: "Docker",
-    level: "Intermediate",
+    level: "basic",
     description: "Containerization for consistent deployment environments.",
   },
 ];
@@ -85,7 +67,7 @@ export default function Skills() {
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-center text-gray-900">
-          Skills
+          ทักษะ
         </h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

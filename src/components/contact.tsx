@@ -9,17 +9,12 @@ const contactItems = [
   {
     icon: <Mail className="w-6 h-6 text-blue-500" />,
     label: "Email",
-    value: "contact@ypengineering.dev",
-  },
-  {
-    icon: <Phone className="w-6 h-6 text-green-500" />,
-    label: "Phone",
-    value: "+66 89-123-4567",
+    value: "onlinepon@gmail.com",
   },
   {
     icon: <MapPin className="w-6 h-6 text-red-500" />,
     label: "Location",
-    value: "Bangkok, Thailand",
+    value: "Nonthaburi, Thailand",
   },
   {
     icon: (
@@ -32,7 +27,7 @@ const contactItems = [
       />
     ),
     label: "LINE",
-    value: "@ypengineering",
+    value: "@341eoawp",
   },
 ];
 
@@ -49,9 +44,9 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">Contact</h2>
+        <h2 className="text-4xl font-bold mb-4 text-gray-900">ติดต่อเรา</h2>
         <p className="text-gray-700 mb-12">
-          Feel free to reach out to us through any of the channels below.
+          อย่าลังเลที่จะติดต่อเราผ่านช่องทางใดๆ ด้านล่างนี้
         </p>
 
         {/* Contact Cards */}

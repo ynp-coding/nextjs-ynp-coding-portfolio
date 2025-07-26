@@ -15,26 +15,10 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio site built with Next.js and Tailwind CSS.",
-    techStack: ["Next.js", "Tailwind CSS", "React"],
-    link: "https://github.com/yp-engineering-dev/portfolio",
-  },
-  {
-    id: 2,
-    title: "E-commerce Platform",
-    description:
-      "An e-commerce platform with shopping cart, payment gateway integration, and admin panel.",
-    techStack: ["React", "Node.js", "Express", "MongoDB"],
-  },
-  {
-    id: 3,
-    title: "Data Dashboard",
-    description:
-      "Real-time data dashboard with charts and analytics using React and D3.js.",
-    techStack: ["React", "D3.js", "REST API"],
-    link: "https://example.com/data-dashboard",
+    title: "Workflow Pipeline & Data management",
+    description: "พัฒนาระบบการรับ-ส่งข้อมูลผ่าน Api และระบบการจัดการข้อมูล",
+    techStack: ["Airflow", "Python", "Api", "Docker"],
+    link: "",
   },
 ];
 
@@ -79,7 +63,7 @@ export default function Projects() {
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-center text-gray-900">
-          Projects
+          ผลงาน
         </h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
