@@ -82,7 +82,7 @@ export default function Hero() {
 
           <div className="flex items-center justify-center md:justify-start gap-4">
             <span className="flex items-center">
-              <MapPin className="w-4 h-4 mr-1" /> นนทบุรี, กรุงเพทมหานคร
+              <MapPin className="w-4 h-4 mr-1" /> นนทบุรี, กรุงเทพมหานคร
             </span>
 
             <span className="flex items-center">
