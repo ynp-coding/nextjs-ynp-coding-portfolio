@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import {
@@ -37,7 +36,6 @@ const sections = [
 export default function Navbar() {
   const [active, setActive] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   // 📌 Scroll listener: update `active` section
   useEffect(() => {
@@ -65,7 +63,7 @@ export default function Navbar() {
     if (currentHash !== active && typeof window !== "undefined") {
       history.replaceState(null, "", `#${active}`);
     }
-  }, [active]);
+  }, [active, isMenuOpen]);
 
   return (
     <NavbarUI

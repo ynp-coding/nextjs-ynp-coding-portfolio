@@ -35,7 +35,6 @@ export default function About() {
       ref={ref}
     >
       <motion.div
-        className="max-w-3xl text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
         transition={{ duration: 0.8, ease: "easeOut" }}
