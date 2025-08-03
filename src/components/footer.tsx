@@ -1,25 +1,35 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Twitter, Github } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Instagram, Linkedin, Twitter, Github } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-10 text-center text-gray-700">
+    <footer className="py-10 text-center text-gray-700">
       <div className="container mx-auto px-4">
-        
-
         <div className="flex justify-center gap-4 my-4">
-          <Link href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <Link
+            href="https://facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
             <Facebook className="w-5 h-5 hover:text-blue-600 transition-colors" />
           </Link>
           <Link href="https://twitter.com" target="_blank" aria-label="Twitter">
             <Twitter className="w-5 h-5 hover:text-blue-400 transition-colors" />
           </Link>
-          <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <Instagram className="w-5 h-5 hover:text-pink-500 transition-colors" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <Link
+            href="https://linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
             <Linkedin className="w-5 h-5 hover:text-blue-700 transition-colors" />
           </Link>
           <Link href="https://github.com" target="_blank" aria-label="GitHub">
@@ -44,5 +54,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

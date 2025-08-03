@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import {
@@ -15,7 +15,8 @@ import {
   Button,
 } from "@heroui/react";
 
-import { Home, Info, Folder, Brain, Phone } from "lucide-react"; // ✅ ใช้ไอคอนจาก lucide-react
+import { Home, Info, Folder, Brain, Phone } from "lucide-react";
+import { ThemeSwitcher } from "./theme-switcher";
 
 const sections = [
   { id: "home", label: "หน้าแรก", icon: <Home className="w-4 h-4 mr-1" /> },
@@ -36,51 +37,43 @@ const sections = [
 export default function Navbar() {
   const [active, setActive] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const router = useRouter();
   const pathname = usePathname();
 
-  // ✅ ป้องกันการ redirect ระหว่าง render
-  useEffect(() => {
-    if (pathname === "/") {
-      router.replace("#home");
-    }
-  }, [pathname, router]);
-
+  // 📌 Scroll listener: update `active` section
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       let current = "home";
       for (const { id } of sections) {
         const el = document.getElementById(id);
-        if (el && el.offsetTop - 100 <= scrollY) current = id;
-      }
-
-      setActive((prev) => {
-        if (prev !== current) {
-          if (window.history.pushState) {
-            window.history.pushState(null, "", `#${current}`);
-          } else {
-            window.location.hash = `#${current}`;
-          }
-          return current;
+        if (el && el.offsetTop - 150 <= scrollY) {
+          current = id;
         }
-        return prev;
-      });
+      }
+      setActive(current);
     };
 
-    // เช็ค hash ตอนเริ่มต้น
-    const hash = window.location.hash.replace("#", "");
-    if (sections.some((s) => s.id === hash)) {
-      setActive(hash);
-    }
-
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // trigger once
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // 💡 อัปเดต hash อย่างปลอดภัย (ไม่ทำใน render)
+  useEffect(() => {
+    const currentHash = window.location.hash.replace("#", "");
+    if (currentHash !== active && typeof window !== "undefined") {
+      history.replaceState(null, "", `#${active}`);
+    }
+  }, [active]);
+
   return (
-    <NavbarUI isBordered position="sticky" onMenuOpenChange={setIsMenuOpen}>
+    <NavbarUI
+      isBordered
+      maxWidth="xl"
+      position="sticky"
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarBrand>
         <p className="font-bold text-inherit">YNP Coding</p>
       </NavbarBrand>
@@ -106,20 +99,28 @@ export default function Navbar() {
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex">
-          <Button as={Link} href="#contact" color="primary" variant="flat">
+          <Button
+            as={Link}
+            href="#contact"
+            color="primary"
+            variant="flat"
+            startContent={<Phone className="w-4 h-4 mr-1" />}
+          >
             ติดต่อเรา
           </Button>
+        </NavbarItem>
+        <NavbarItem className="hidden sm:flex">
+          <ThemeSwitcher />
         </NavbarItem>
         <NavbarMenuToggle className="sm:hidden" />
       </NavbarContent>
 
-      {/* Mobile Menu */}
       <NavbarMenu>
         {sections.map(({ id, label, icon }) => (
           <NavbarMenuItem key={id}>
             <Link
               href={`#${id}`}
-              onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
+              onClick={() => setIsMenuOpen(false)}
               className={cn("flex items-center gap-2 px-4 py-2 w-full", {
                 "text-primary font-bold": active === id,
               })}

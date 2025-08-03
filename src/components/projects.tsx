@@ -58,7 +58,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gray-50 px-4 sm:px-8 py-24"
+      className="min-h-screen px-4 sm:px-8 py-24"
       ref={ref}
     >
       <div className="max-w-5xl mx-auto">
@@ -71,7 +71,7 @@ export default function Projects() {
             ({ id, title, description, techStack, link }, index) => (
               <motion.div
                 key={id}
-                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                className="rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}

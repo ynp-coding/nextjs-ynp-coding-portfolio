@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex items-center justify-center min-h-screen bg-white px-24 sm:px-8"
+      className="flex items-center justify-center min-h-screen px-24 sm:px-8"
       ref={ref}
     >
       <motion.div
