@@ -60,7 +60,11 @@ export default function Skills() {
   }, [controls]);
 
   return (
-    <section id="skills" className="min-h-screen px-4 sm:px-8 py-24" ref={ref}>
+    <section
+      id="skills"
+      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
+      ref={ref}
+    >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-center text-gray-900">
           ทักษะ

@@ -45,7 +45,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="container mx-auto min-h-screen flex items-center"
+      className="container mx-auto min-h-screen flex items-center px-4 sm:px-8 py-24"
     >
       <motion.div
         aria-hidden="true"
@@ -145,7 +145,7 @@ export default function Hero() {
               transition={{ duration: 6, repeat: Infinity }}
             >
               <Image
-                className="rounded-full w-[450px] h-[450px] md:w-[280px] md:h-[280px] lg:w-[450px] lg:h-[450px]"
+                className="rounded-full w-[450px] h-[450px] md:w-[280px] md:h-[280px] lg:w-[400px] lg:h-[400px]"
                 src="/icons/banner-logo.png"
                 alt="YNP Coding logo"
                 width={1000}

@@ -33,7 +33,10 @@ const contactItems = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-4 sm:px-8 min-h-screen">
+    <section
+      id="contact"
+      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
+    >
       <motion.div
         className="max-w-4xl mx-auto text-center"
         initial={{ opacity: 0, y: 50 }}

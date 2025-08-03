@@ -58,7 +58,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen px-4 sm:px-8 py-24"
+      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
       ref={ref}
     >
       <div className="max-w-5xl mx-auto">

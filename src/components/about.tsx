@@ -29,7 +29,11 @@ export default function About() {
   }, [controls]);
 
   return (
-    <section id="about" className="min-h-screen px-4 sm:px-8 py-24" ref={ref}>
+    <section
+      id="about"
+      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
+      ref={ref}
+    >
       <motion.div
         className="max-w-3xl text-center"
         initial={{ opacity: 0, y: 50 }}
