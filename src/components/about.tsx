@@ -53,8 +53,8 @@ export default function About() {
           transition={{ duration: 2, delay: 0.5 }}
         >
           <Image
-            className="w-[420px] h-[420px] rounded-md drop-shadow-[0_0_20px_rgba(0,0,0,0.2)]"
-            src="/icons/banner-logo-4.jpg"
+            className="w-[420px] h-[400px] rounded-md drop-shadow-[0_0_20px_rgba(0,0,0,0.2)]"
+            src="/icons/banner-logo-5.jpg"
             alt="Banner About logo"
             width={1000}
             height={1000}
@@ -62,7 +62,7 @@ export default function About() {
           />
         </motion.div>
 
-        <motion.div
+        <motion.section
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
           transition={{ duration: 1.6, delay: 0.4 }}
@@ -83,7 +83,7 @@ export default function About() {
             พร้อมให้คำปรึกษาทางเทคนิคและวางระบบให้สอดคล้องกับการใช้งานจริงของธุรกิจคุณ
           </p>
 
-          <motion.section
+          <motion.div
             className="px-4 py-2"
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
@@ -102,9 +102,9 @@ export default function About() {
               <li>DevOps, Docker, CI/CD, Cloud Deployment (เช่น AWS, GCP)</li>
               <li>ให้คำปรึกษาด้านเทคนิคและปรับปรุงระบบเดิม</li>
             </ul>
-          </motion.section>
+          </motion.div>
 
-          <motion.section
+          <motion.div
             className="px-4 py-2"
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
@@ -120,9 +120,9 @@ export default function About() {
               <li>สื่อสารง่าย ตรงประเด็น และเป็นกันเอง</li>
               <li>ส่งมอบงานตรงเวลา พร้อมเอกสารประกอบครบถ้วน</li>
             </ul>
-          </motion.section>
+          </motion.div>
 
-          <motion.p
+          <motion.div
             className="px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={controls}
@@ -137,8 +137,8 @@ export default function About() {
                 คลิกเลย! หากสนใจร่วมงานหรือขอใบเสนอราคา ติดต่อเราได้เลย
               </Link>
             </motion.div>
-          </motion.p>
-        </motion.div>
+          </motion.div>
+        </motion.section>
       </div>
     </section>
   );
