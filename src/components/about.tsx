@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
+      className="container min-h-screen px-4 py-24 mx-auto sm:px-8"
       ref={ref}
     >
       <motion.div
@@ -39,9 +39,9 @@ export default function About() {
         animate={controls}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h1 className="text-4xl font-bold mb-4 text-gray-900">เกี่ยวกับเรา</h1>
+        <h1 className="mb-4 text-4xl font-bold text-gray-900">เกี่ยวกับเรา</h1>
 
-        <p className="text-lg text-gray-700 leading-8">
+        <p className="text-lg leading-8 text-gray-700">
           <span className="font-semibold">YNP Coding</span> รับพัฒนาระบบ
           <span className="font-semibold text-primary">
             {" "}

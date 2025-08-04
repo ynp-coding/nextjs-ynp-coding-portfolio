@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
+      className="container min-h-screen px-4 py-24 mx-auto sm:px-8"
     >
       <motion.div
         className="max-w-4xl mx-auto text-center"
@@ -44,17 +44,17 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">ติดต่อเรา</h2>
-        <p className="text-gray-700 mb-12">
+        <h2 className="mb-4 text-4xl font-bold text-gray-900">ติดต่อเรา</h2>
+        <p className="mb-12 text-gray-700">
           อย่าลังเลที่จะติดต่อเราผ่านช่องทางใดๆ ด้านล่างนี้
         </p>
 
         {/* Contact Cards */}
-        <div className="grid sm:grid-cols-2 gap-6 text-left">
+        <div className="grid gap-6 text-left sm:grid-cols-2">
           {contactItems.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white shadow-md rounded-2xl p-6 flex items-center gap-4"
+              className="flex items-center gap-4 p-6 bg-white shadow-md rounded-2xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 * index }}
@@ -62,8 +62,8 @@ export default function Contact() {
             >
               {item.icon}
               <div>
-                <p className="text-gray-700 font-semibold">{item.label}</p>
-                <p className="text-gray-600 text-sm">{item.value}</p>
+                <p className="font-semibold text-gray-700">{item.label}</p>
+                <p className="text-sm text-gray-600">{item.value}</p>
               </div>
             </motion.div>
           ))}

@@ -20,7 +20,7 @@ export function ThemeSwitcher() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="p-2 rounded-md hover:bg-muted transition-colors"
+      className="p-2 transition-colors rounded-md hover:bg-muted"
       aria-label="Toggle theme"
     >
       {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}

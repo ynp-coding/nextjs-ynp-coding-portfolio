@@ -58,11 +58,11 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="container mx-auto min-h-screen px-4 sm:px-8 py-24"
+      className="container min-h-screen px-4 py-24 mx-auto sm:px-8"
       ref={ref}
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 text-center text-gray-900">
+        <h2 className="mb-10 text-4xl font-bold text-center text-gray-900">
           ผลงาน
         </h2>
 
@@ -71,7 +71,7 @@ export default function Projects() {
             ({ id, title, description, techStack, link }, index) => (
               <motion.div
                 key={id}
-                className="rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                className="p-6 transition-shadow rounded-lg shadow-md hover:shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -81,16 +81,16 @@ export default function Projects() {
                   ease: "easeOut",
                 }}
               >
-                <h3 className="text-2xl font-semibold mb-3 text-gray-800">
+                <h3 className="mb-3 text-2xl font-semibold text-gray-800">
                   {title}
                 </h3>
-                <p className="text-gray-600 mb-4">{description}</p>
+                <p className="mb-4 text-gray-600">{description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-primary/20 text-primary rounded px-2 py-1 text-sm font-medium"
+                      className="px-2 py-1 text-sm font-medium rounded bg-primary/20 text-primary"
                     >
                       {tech}
                     </span>

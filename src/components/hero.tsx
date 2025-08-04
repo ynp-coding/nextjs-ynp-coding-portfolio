@@ -45,7 +45,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="container mx-auto min-h-screen flex items-center px-4 sm:px-8 py-24"
+      className="container flex items-center min-h-screen px-4 py-24 mx-auto sm:px-8"
     >
       <motion.div
         aria-hidden="true"
@@ -54,9 +54,9 @@ export default function Hero() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className="order-2 md:order-1 p-4 col-span-2">
+        <div className="order-2 col-span-2 p-4 md:order-1">
           <motion.div
-            className="text-center md:text-left space-y-6"
+            className="space-y-6 text-center md:text-left"
             initial="hidden"
             animate={controls}
             variants={{
@@ -66,7 +66,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="text-3xl font-extrabold leading-tight drop-shadow-lg">
-              <span className="text-yellow-500 text-4xl">YNP Coding</span>
+              <span className="text-4xl text-yellow-500">YNP Coding</span>
               <br />
               <p>Web Application & Data Engineer</p>
             </h1>
@@ -78,7 +78,7 @@ export default function Hero() {
               สำหรับการประมวลผลและวิเคราะห์ข้อมูลอย่างมีประสิทธิภาพ
             </p>
 
-            <div className="flex items-center justify-center md:justify-start gap-4">
+            <div className="flex items-center justify-center gap-4 md:justify-start">
               <span className="flex items-center">
                 <MapPin className="w-4 h-4 mr-1" /> นนทบุรี, กรุงเทพมหานคร
               </span>
@@ -89,7 +89,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <div className="pt-4 flex gap-4 justify-center md:justify-start">
+            <div className="flex justify-center gap-4 pt-4 md:justify-start">
               <Button
                 as={Link}
                 href="#projects"
@@ -112,7 +112,7 @@ export default function Hero() {
 
             <hr className="text-gray-300/80" />
 
-            <div className="flex gap-4 items-center justify-center md:justify-start">
+            <div className="flex items-center justify-center gap-4 md:justify-start">
               ติดตามเรา :
               <Link
                 href={"https://www.facebook.com/profile.php?id=61578989523331"}
@@ -128,7 +128,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <div className="order-1 md:order-2 flex justify-center">
+        <div className="flex justify-center order-1 md:order-2">
           <motion.div
             className=""
             initial="hidden"

@@ -76,7 +76,7 @@ export default function Navbar() {
         <p className="font-bold text-inherit">YNP Coding</p>
       </NavbarBrand>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         {sections.slice(0, -1).map(({ id, label, icon }) => (
           <NavbarItem key={id} isActive={active === id}>
             <Link
