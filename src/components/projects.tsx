@@ -70,7 +70,7 @@ export default function Projects() {
       ref={ref}
     >
       <motion.h1
-        className="mb-4 text-4xl font-bold text-center text-gray-900"
+        className="mb-4 text-4xl font-bold text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={controls}
         transition={{ duration: 0.5, delay: 2 }}

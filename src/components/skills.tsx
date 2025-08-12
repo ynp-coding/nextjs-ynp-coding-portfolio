@@ -66,9 +66,7 @@ export default function Skills() {
       ref={ref}
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="mb-10 text-4xl font-bold text-center text-gray-900">
-          ทักษะ
-        </h2>
+        <h2 className="mb-10 text-4xl font-bold text-center">ทักษะ</h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map(({ id, name, level, description }, index) => (

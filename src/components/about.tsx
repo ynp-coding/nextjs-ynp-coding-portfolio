@@ -37,7 +37,7 @@ export default function About() {
       ref={ref}
     >
       <motion.h1
-        className="mb-4 text-4xl font-bold text-center text-gray-900"
+        className="mb-4 text-4xl font-bold text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
         transition={{ duration: 1.5 }}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Chip } from "@heroui/react";
+import { Button, Chip, Card, CardBody } from "@heroui/react";
 import { motion } from "framer-motion";
 
 interface Project {
@@ -38,48 +38,49 @@ export default function ListProjects({
   status,
 }: Project) {
   return (
-    <motion.div
+    <Card
+      as={motion.section}
       key={id}
-      className="p-6 transition-shadow rounded-lg shadow-md hover:shadow-lg bg-white/70"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="flex items-start justify-between gap-4">
-        <h3 className="mb-3 text-2xl font-semibold text-gray-800">{title}</h3>
-        <Chip color={statusToColor(status)} variant="flat">
-          {status}
-        </Chip>
-      </div>
+      <CardBody>
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
+          <Chip color={statusToColor(status)} variant="flat">
+            {status}
+          </Chip>
+        </div>
 
-      <p className="mb-4 text-gray-600">{description}</p>
+        <p className="mb-4">{description}</p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
-        {techStack.map((tech, i) => (
-          <span
-            key={`${id}-${tech}-${i}`}
-            className="px-2 py-1 text-sm font-medium rounded bg-primary/20 text-primary"
+        <div className="flex flex-wrap gap-2 mb-4">
+          {techStack.map((tech, i) => (
+            <span
+              key={`${id}-${tech}-${i}`}
+              className="px-2 py-1 text-sm font-medium rounded bg-primary/20 text-primary dark:text-white"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {link && (
+          <Button
+            as="a"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            color="primary"
+            variant="flat"
+            size="sm"
+            aria-label={`View ${title}`}
           >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      {link && (
-        <Button
-          as="a"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          color="primary"
-          variant="flat"
-          size="sm"
-          aria-label={`View ${title}`}
-        >
-          View Project
-        </Button>
-      )}
-    </motion.div>
+            View Project
+          </Button>
+        )}
+      </CardBody>
+    </Card>
   );
 }

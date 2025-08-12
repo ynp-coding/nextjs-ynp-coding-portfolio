@@ -44,7 +44,7 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="mb-4 text-4xl font-bold text-gray-900">ติดต่อเรา</h2>
+        <h2 className="mb-4 text-4xl font-bold">ติดต่อเรา</h2>
         <p className="mb-12 text-gray-700">
           อย่าลังเลที่จะติดต่อเราผ่านช่องทางใดๆ ด้านล่างนี้
         </p>
