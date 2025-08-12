@@ -19,7 +19,7 @@ const contactItems = [
   {
     icon: (
       <Image
-        src="/line-icon.png"
+        src="/icons/line-icon.png"
         alt="LINE"
         width={24}
         height={24}
