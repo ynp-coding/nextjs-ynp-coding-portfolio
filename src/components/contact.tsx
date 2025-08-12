@@ -9,7 +9,7 @@ const contactItems = [
   {
     icon: <Mail className="w-6 h-6 text-blue-500" />,
     label: "Email",
-    value: "onlinepon@gmail.com",
+    value: "onlinepon.dev@gmail.com",
   },
   {
     icon: <MapPin className="w-6 h-6 text-red-500" />,
