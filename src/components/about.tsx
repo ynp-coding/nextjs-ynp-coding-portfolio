@@ -54,7 +54,7 @@ export default function About() {
         >
           <Image
             className="w-[420px] h-[400px] rounded-md drop-shadow-[0_0_20px_rgba(0,0,0,0.2)]"
-            src="/icons/banner-logo-5.jpg"
+            src="/icons/banner-logo-5.png"
             alt="Banner About logo"
             width={1000}
             height={1000}
@@ -73,8 +73,7 @@ export default function About() {
             คือทีมพัฒนาระบบที่เชี่ยวชาญด้าน
             การออกแบบและพัฒนาซอฟต์แวร์ตามความต้องการของลูกค้า
             ทั้งในรูปแบบเว็บแอปพลิเคชัน โมบายแอป ระบบหลังบ้าน
-            และการเชื่อมต่อกับบริการภายนอก เช่น API, IoT, หรือระบบ ERP/CRM ต่าง
-            ๆ
+            และการเชื่อมต่อกับบริการภายนอก เช่น API, IoT, หรือระบบต่าง ๆ
           </p>
           <p className="indent-8">
             เรามุ่งมั่นในการสร้างสรรค์ผลงานที่มีคุณภาพ ใช้งานง่าย
@@ -95,12 +94,12 @@ export default function About() {
                 พัฒนาเว็บแอปและระบบหลังบ้าน (Web Application, Admin Dashboard)
               </li>
               <li>ออกแบบและพัฒนา RESTful API</li>
-              <li>
+              {/* <li>
                 เชื่อมต่อระบบ ERP, CRM, ระบบบัญชี, ระบบจัดการคลังสินค้า ฯลฯ
               </li>
               <li>วางโครงสร้างฐานข้อมูลและออกแบบระบบที่สามารถปรับขยายได้</li>
               <li>DevOps, Docker, CI/CD, Cloud Deployment (เช่น AWS, GCP)</li>
-              <li>ให้คำปรึกษาด้านเทคนิคและปรับปรุงระบบเดิม</li>
+              <li>ให้คำปรึกษาด้านเทคนิคและปรับปรุงระบบเดิม</li> */}
             </ul>
           </motion.div>
 
